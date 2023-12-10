@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WelcomeFragment">
+
+    <include layout="@layout/default_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:text="@string/login"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icLogin"
+        android:layout_width="184.15dp"
+        android:layout_height="286.71dp"
+        android:background="@drawable/ic_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleLogin"
+        app:layout_goneMarginTop="15dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/usernameLogin"
+        android:layout_width="368dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_soft_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icLogin" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icUsername"
+        android:layout_width="35dp"
+        android:layout_height="28dp"
+        android:background="@drawable/ic_user"
+        app:layout_constraintStart_toStartOf="@id/usernameLogin"
+        android:layout_marginStart="30dp"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toBottomOf="@id/usernameLogin"
+        app:layout_constraintTop_toTopOf="@id/usernameLogin" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etUsername"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@id/usernameLogin"
+        app:layout_constraintTop_toTopOf="@id/usernameLogin"
+        app:layout_constraintStart_toEndOf="@id/usernameLogin"
+        android:layout_marginStart="35dp"
+        app:layout_constraintEnd_toEndOf="@id/usernameLogin"
+        android:textColorHint="@color/med_purple"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/password"
+        android:layout_width="368dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_soft_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUsername" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icPassword"
+        android:layout_width="35dp"
+        android:layout_height="28dp"
+        android:background="@drawable/ic_lock"
+        app:layout_constraintStart_toStartOf="@id/password"
+        android:layout_marginStart="30dp"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toBottomOf="@id/password"
+        app:layout_constraintTop_toTopOf="@id/password" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:textColor="@color/white"
+        android:textSize="23dsp"
+        app:layout_constraintBottom_toBottomOf="@id/password"
+        app:layout_constraintTop_toTopOf="@id/password"
+        app:layout_constraintStart_toEndOf="@id/icPassword"
+        android:layout_marginStart="35dp"
+        app:layout_constraintEnd_toStartOf="@id/icEye"
+        android:textColorHint="@color/med_purple"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icEye"
+        android:layout_width="27dp"
+        android:layout_height="18.56dp"
+        android:background="@drawable/ic_eye"
+        app:layout_constraintEnd_toEndOf="@id/password"
+        android:layout_marginEnd="13dp"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toBottomOf="@id/password"
+        app:layout_constraintTop_toTopOf="@id/password"
+        android:clickable="true"
+        android:contentDescription="Password Toggle"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnRegisterReg"
+        android:layout_width="368dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_deep_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:clickable="true"
+        android:contentDescription="Register Button"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRegisterReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnRegisterReg"
+        app:layout_constraintEnd_toEndOf="@id/btnRegisterReg"
+        app:layout_constraintStart_toStartOf="@id/btnRegisterReg"
+        app:layout_constraintTop_toTopOf="@id/btnRegisterReg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
