@@ -3,37 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/welcomeFragment">
+    app:startDestination="@id/loginFragment">
+
 
     <fragment
-        android:id="@+id/welcomeFragment"
-        android:name="com.example.assignment16.WelcomeFragment"
-        android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" >
+        android:id="@+id/loginFragment"
+        android:name="com.example.assignment16.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_welcomeFragment_to_registerFragment"
+            android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
         <action
-            android:id="@+id/action_welcomeFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.assignment16.RegisterFragment"
         android:label="RegisterFragment"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_register" />
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.assignment16.RegisterFragment"
-        android:label="LoginFragment"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+        android:id="@+id/homeFragment"
+        android:name="com.example.assignment16.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="email"
+            app:argType="string" />
     </fragment>
 </navigation>
